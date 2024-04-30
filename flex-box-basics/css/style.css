@@ -13,19 +13,47 @@ body {
     flex-direction: row;
     background-color: #f4f4f4;
 
+    /* Each child item part of this container will have a gap between them of 10px. */
+    gap: 10px;
+
     /* Always on the main axis (main axis relates to the flex-direction) */
     /* justify-content: end; */
 
     /* Always on the cross axis */
     /* align-items: start; */
+    
+    /* Wrap items when we run out of space */
+    /* flex-wrap: wrap; */
 }
 
 .item {
-    width: 100px;
+    /* width: 100px; */
     height: 100px;
     background: #254de4;
     color: #fff;
-    margin: 10px;
+
+    /* Center any content inside the .item class (the text in this case) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Each item will be at least 100px wide. Since flex-grow is set on all three of them to 1, they'll all take up equal space */
+    flex-basis: 100px;
+
+    /* flex-grow - the rate different items grow (like a ratio). The reverse being flex-shrink :) */
+    /* flex-grow: 1; */
+
+    /* This means:
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100px; */
+    /* flex: 1 0 100px; */
+
+    /* flex: 1;
+    is the same as writing
+    flex: 1 1 0; */
+
+    flex: 1;
 }
 
 .item:nth-of-type(1) {
@@ -37,5 +65,3 @@ body {
 }
 
 .item:nth-of-type(3) {
-
-}
