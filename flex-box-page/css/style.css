@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #a1c3ff;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 {
+    margin-bottom: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    /* This puts the margin-top and bottom to 0, and the left and right to auto
+    Combined with the max-width this centers the container with a max width of 1100px */
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 0 30px;
+}
+
+.navbar {
+    background-color: #3474e6;
+    color: #fff;
+    height: 60px;
+}
+
+.navbar .logo {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Without a set height, this container has no defined height here. So that's why 100% is needed for the align-items to work. */
+    height: 100%;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: lightblue;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.header {
+    background-color: #0151cc;
+    color: #fff;
+    min-height: 400px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header img {
+    max-width: 400px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxes .container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.box {
+    flex: 1;
+    background-color: #0151cc;
+    color: #fff;
+    border-radius: 10px;
+    padding: 16px;
+
+    /* 0px offset-x , 3px offset-y, blur-radius 5px , see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.6);
+}
+
+.box i {
+    margin-right: 8px;
+}
+
+/* This CSS will only be applied if the viewport width is 768px or below */
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .boxes .container {
+        flex-direction: column;
+    }
+}
