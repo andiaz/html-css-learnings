@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0;
+    color: #FFF;
+    height: 100vh;
+    background-color: #141414;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+.profile {
+    padding: 40px;
+    min-width: 384px;
+    
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #1F1F1F;
+    border-radius: 12px;
+}
+
+.profile__image {
+    width: 88px;
+    height: 88px;
+    border-radius: 100%;
+}
+
+.profile__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.profile__header > h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.profile__header > p {
+    font-weight: 700;
+    line-height: 1.5;
+    color: #C4F82A;
+}
+
+.profile__quote {
+    line-height: 1.5;
+}
+
+.profile__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 16px;
+}
+
+.profile__buttons > button {
+    background-color: #333333;
+    color: #FFF;
+    transition: 
+        background-color 0.2s ease-in,
+        color 0.2s ease-in;
+    border: 0;
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.profile__buttons > button:is(:hover, :focus)  {
+    background-color: #C4F82A;
+    color: #000;
+    cursor: pointer;
+}
