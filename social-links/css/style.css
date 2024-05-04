@@ -63,16 +63,19 @@ body {
     font-size: 24px;
     line-height: 1.5;
     font-weight: 600;
+    text-align: center;
 }
 
 .profile__header > p {
     font-weight: 700;
     line-height: 1.5;
     color: #C4F82A;
+    text-align: center;
 }
 
 .profile__quote {
     line-height: 1.5;
+    text-align: center;
 }
 
 .profile__buttons {
@@ -101,4 +104,15 @@ body {
     background-color: #C4F82A;
     color: #000;
     cursor: pointer;
+}
+
+@media(max-width: 375px) {
+    .container
+    {
+        margin: 0px 24px;
+    }
+    .profile {
+        padding: 24px;
+        min-width: auto;
+    }
 }
