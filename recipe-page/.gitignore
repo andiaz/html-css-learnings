@@ -1,0 +1,7 @@
+*.sketch
+*.fig
+*.zip
+*.xd
+
+.DS_Store
+.prettierignore
