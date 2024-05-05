@@ -108,6 +108,7 @@ body {
     color: var(--color-dark-raspberry);
     font-size: var(--font-size-heading-s);
     font-weight: var(--font-weight-heading-s);
+    line-height: var(--line-height-heading);
 }
 
 .preparation__list,
