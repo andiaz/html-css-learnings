@@ -78,7 +78,7 @@ body {
     text-align: center;
 }
 
-.profile__buttons {
+.profile__list {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -86,7 +86,8 @@ body {
     gap: 16px;
 }
 
-.profile__buttons > button {
+.profile__list-item {
+    list-style-type: none;
     background-color: #333333;
     color: #FFF;
     transition: 
@@ -98,9 +99,10 @@ body {
     line-height: 1.5;
     font-size: 14px;
     font-weight: 700;
+    text-align: center;
 }
 
-.profile__buttons > button:is(:hover, :focus)  {
+.profile__list-item:is(:hover, :focus)  {
     background-color: #C4F82A;
     color: #000;
     cursor: pointer;
