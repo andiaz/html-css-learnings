@@ -34,6 +34,8 @@ body {
   object-fit: cover;
   object-position: 50% top;
   max-height: 240px;
+  height: auto;
+  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; }
 
@@ -130,3 +132,7 @@ body {
   .product__prices,
   .product__button {
     margin-top: 22px; } }
+
+@media (max-width: 311px) {
+  .button__image {
+    display: none; } }
