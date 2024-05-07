@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* 
+CSS Reset
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* 
+End CSS Reset
+*/
+/* Basic SASS test */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #F2EAE2;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.product {
+  max-width: 600px;
+  background-color: #FFF;
+  border-radius: 10px;
+  display: flex; }
+
+.product__image--mobile {
+  display: none;
+  object-fit: cover;
+  object-position: 50% top;
+  max-height: 240px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; }
+
+.product__image--desktop {
+  width: 50%;
+  object-fit: cover;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px; }
+
+.product__content {
+  padding: 32px; }
+
+.product__overline {
+  color: #6C7289;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: auto; }
+
+.display {
+  font-size: 32px;
+  line-height: 1;
+  font-family: "Fraunces", serif;
+  font-weight: 700; }
+
+.product__header {
+  color: #1C232B; }
+
+.product__description {
+  line-height: 23px;
+  color: #6C7289;
+  font-weight: 500;
+  font-size: 14px; }
+
+.product__prices {
+  display: flex;
+  align-items: center;
+  gap: 19px; }
+
+.price__discount {
+  color: #3D8168;
+  margin: 0; }
+
+.price__original {
+  color: #6C7289;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 23px;
+  text-decoration: line-through; }
+
+.product__button {
+  display: flex;
+  gap: 8px;
+  padding: 15px 62px;
+  background-color: #3D8168;
+  border: none;
+  border-radius: 8px;
+  margin-top: 24px; }
+
+.product__button:hover {
+  background-color: #1A4032;
+  cursor: pointer; }
+
+.button__image {
+  color: #FFF; }
+
+.button__text {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px; }
+
+@media (max-width: 600px) {
+  .product {
+    flex-direction: column;
+    margin: 28px 16px;
+    max-width: none; }
+  .product__image--mobile {
+    display: block; }
+  .product__image--desktop {
+    display: none; }
+  .product__content {
+    padding: 24px; } }

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+CSS Reset
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+End CSS Reset
+*/
+
+
+/* Basic SASS test */
+
+$pure-white: #FFF;
+$cream-bg: #F2EAE2;
+$aurometal-saurus: #6C7289;
+$deep-aquamarine: #3D8168;
+$deep-aquamarine-hover: #1A4032;
+$gunmetal: #1C232B;
+
+$font-fraunces: "Fraunces", serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+$font-size-large: 32px;
+$font-size-normal: 14px;
+$font-size-small: 12px;
+
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+
+$border-radius-medium: 10px;
+
+
+body {
+font-family: $font-montserrat;
+background-color: $cream-bg;
+margin: 0;
+padding: 0;
+}
+
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.product {
+max-width: 600px;
+background-color: $pure-white;
+border-radius: $border-radius-medium;
+display: flex;
+}
+
+.product__image--mobile {
+  display: none;
+  object-fit: cover;
+  object-position: 50% top;
+  max-height: 240px;
+  border-top-left-radius: $border-radius-medium;
+  border-top-right-radius: $border-radius-medium;
+}
+
+.product__image--desktop {
+width: 50%;
+object-fit: cover;
+border-bottom-left-radius: $border-radius-medium;
+border-top-left-radius: $border-radius-medium;
+}
+
+.product__content {
+padding: 32px;
+}
+
+.product__overline {
+color: $aurometal-saurus;
+font-size: $font-size-small;
+font-weight: $font-weight-medium;
+font-family: $font-montserrat;
+letter-spacing: 5px;
+text-transform: uppercase;
+line-height: auto;
+}
+
+.display {
+font-size: $font-size-large;
+line-height: 1;
+font-family: $font-fraunces;
+font-weight: $font-weight-bold;
+}
+
+.product__header {
+color: $gunmetal;
+}
+
+.product__description {
+line-height: 23px;
+color: $aurometal-saurus;
+font-weight: $font-weight-medium;
+font-size: $font-size-normal;
+}
+
+.product__prices {
+display: flex;
+align-items: center;
+gap: 19px;
+}
+
+.price__discount {
+color: $deep-aquamarine;
+margin: 0;
+}
+
+.price__original {
+  color: $aurometal-saurus;
+  font-weight: $font-weight-medium;
+  font-family: $font-montserrat;
+  font-size: 13px;
+  line-height: 23px;
+  text-decoration: line-through;
+}
+
+.product__button {
+  display: flex;
+  gap: 8px;
+  padding: 15px 62px;
+  background-color: $deep-aquamarine;
+  border: none;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.product__button:hover {
+  background-color: $deep-aquamarine-hover;
+  cursor: pointer;
+}
+
+.button__image {
+  color: $pure-white;
+}
+
+.button__text {
+  color: $pure-white;
+  font-family: $font-montserrat;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-normal;
+}
+
+@media(max-width: 600px) {
+  
+  .product {
+    flex-direction: column;
+    margin: 28px 16px;
+    max-width: none;
+  }
+  .product__image--mobile {
+    display: block;
+  }
+  
+  .product__image--desktop {
+    display: none;
+  }
+
+  .product__content {
+    padding: 24px;
+  }
+}
