@@ -5,17 +5,13 @@
 CSS Reset
  */
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-/* 
-End CSS Reset
-*/
-
 
 /* Basic SASS test */
 
@@ -99,11 +95,13 @@ font-weight: $font-weight-bold;
 }
 
 .product__header {
-color: $gunmetal;
+  color: $gunmetal;
+  margin-top: 20px;
 }
 
 .product__description {
 line-height: 23px;
+margin-top: 24px;
 color: $aurometal-saurus;
 font-weight: $font-weight-medium;
 font-size: $font-size-normal;
@@ -112,6 +110,7 @@ font-size: $font-size-normal;
 .product__prices {
 display: flex;
 align-items: center;
+margin-top: 29px;
 gap: 19px;
 }
 
@@ -136,7 +135,9 @@ margin: 0;
   background-color: $deep-aquamarine;
   border: none;
   border-radius: 8px;
-  margin-top: 24px;
+  margin-top: 30px;
+  width: 100%;
+  justify-content: center;
 }
 
 .product__button:hover {
@@ -160,7 +161,6 @@ margin: 0;
   .product {
     flex-direction: column;
     margin: 28px 16px;
-    max-width: none;
   }
   .product__image--mobile {
     display: block;
@@ -172,5 +172,15 @@ margin: 0;
 
   .product__content {
     padding: 24px;
+  }
+
+  .product__header,
+  .product__description {
+    margin-top: 14px;
+  }
+
+  .product__prices,
+  .product__button {
+    margin-top: 22px;
   }
 }

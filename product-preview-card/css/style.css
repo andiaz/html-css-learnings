@@ -3,15 +3,13 @@
 /* 
 CSS Reset
  */
-/* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-/* 
-End CSS Reset
-*/
 /* Basic SASS test */
 body {
   font-family: "Montserrat", sans-serif;
@@ -64,10 +62,12 @@ body {
   font-weight: 700; }
 
 .product__header {
-  color: #1C232B; }
+  color: #1C232B;
+  margin-top: 20px; }
 
 .product__description {
   line-height: 23px;
+  margin-top: 24px;
   color: #6C7289;
   font-weight: 500;
   font-size: 14px; }
@@ -75,6 +75,7 @@ body {
 .product__prices {
   display: flex;
   align-items: center;
+  margin-top: 29px;
   gap: 19px; }
 
 .price__discount {
@@ -96,7 +97,9 @@ body {
   background-color: #3D8168;
   border: none;
   border-radius: 8px;
-  margin-top: 24px; }
+  margin-top: 30px;
+  width: 100%;
+  justify-content: center; }
 
 .product__button:hover {
   background-color: #1A4032;
@@ -114,11 +117,16 @@ body {
 @media (max-width: 600px) {
   .product {
     flex-direction: column;
-    margin: 28px 16px;
-    max-width: none; }
+    margin: 28px 16px; }
   .product__image--mobile {
     display: block; }
   .product__image--desktop {
     display: none; }
   .product__content {
-    padding: 24px; } }
+    padding: 24px; }
+  .product__header,
+  .product__description {
+    margin-top: 14px; }
+  .product__prices,
+  .product__button {
+    margin-top: 22px; } }
