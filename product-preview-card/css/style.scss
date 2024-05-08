@@ -86,7 +86,7 @@ font-weight: $font-weight-medium;
 font-family: $font-montserrat;
 letter-spacing: 5px;
 text-transform: uppercase;
-line-height: auto;
+line-height: 1;
 }
 
 .display {
@@ -94,11 +94,17 @@ font-size: $font-size-large;
 line-height: 1;
 font-family: $font-fraunces;
 font-weight: $font-weight-bold;
+font-optical-sizing: auto;
+font-style: normal;
+font-variation-settings:
+    "SOFT" 0,
+    "WONK" 1;
 }
 
 .product__header {
   color: $gunmetal;
   margin-top: 20px;
+  width: 100%;
 }
 
 .product__description {
@@ -133,7 +139,7 @@ margin: 0;
 .product__button {
   display: flex;
   gap: 8px;
-  padding: 15px 62px;
+  padding: 15px;
   background-color: $deep-aquamarine;
   transition: background-color 0.2s ease-in;
   border: none;
@@ -157,6 +163,16 @@ margin: 0;
   font-family: $font-montserrat;
   font-weight: $font-weight-bold;
   font-size: $font-size-normal;
+}
+
+@media(max-width: 668px) and (orientation: landscape) {
+  .container {
+    height: auto;
+  }
+
+  .product {
+    margin: 28px 16px;
+  }
 }
 
 @media(max-width: 600px) {

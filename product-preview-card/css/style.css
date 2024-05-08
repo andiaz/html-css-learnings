@@ -55,17 +55,21 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
   text-transform: uppercase;
-  line-height: auto; }
+  line-height: 1; }
 
 .display {
   font-size: 32px;
   line-height: 1;
   font-family: "Fraunces", serif;
-  font-weight: 700; }
+  font-weight: 700;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 1; }
 
 .product__header {
   color: #1C232B;
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: 100%; }
 
 .product__description {
   line-height: 23px;
@@ -95,7 +99,7 @@ body {
 .product__button {
   display: flex;
   gap: 8px;
-  padding: 15px 62px;
+  padding: 15px;
   background-color: #3D8168;
   transition: background-color 0.2s ease-in;
   border: none;
@@ -116,6 +120,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 14px; }
+
+@media (max-width: 668px) and (orientation: landscape) {
+  .container {
+    height: auto; }
+  .product {
+    margin: 28px 16px; } }
 
 @media (max-width: 600px) {
   .product {
