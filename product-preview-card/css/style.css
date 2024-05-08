@@ -73,7 +73,7 @@ body {
 
 .product__description {
   line-height: 23px;
-  margin-top: 24px;
+  margin-top: 22px;
   color: #6C7289;
   font-weight: 500;
   font-size: 14px; }
@@ -81,7 +81,7 @@ body {
 .product__prices {
   display: flex;
   align-items: center;
-  margin-top: 29px;
+  margin-top: 31px;
   gap: 19px; }
 
 .price__discount {
