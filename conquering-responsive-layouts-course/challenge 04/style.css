@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Reset CSS */
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -23,6 +25,7 @@
     --font-weight-bold: 700;
     --font-weight-regular: 400;
 
+    --spacing-xs: 8px;
     --spacing-s: 16px;
     --spacing-m: 24px;
     --spacing-l: 40px;
@@ -38,6 +41,8 @@
     --line-height-h1: 56.31px;
     --line-height-medium: 1.5;
     --line-height-small: 1.2;
+
+    --border-radius-large: 100px;
 }
 
 body {
@@ -108,10 +113,43 @@ p {
     width: 30%;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 
 /*******************/
 /* Specific classes */
 /*******************/
+
+.header {
+    padding: var(--spacing-s) var(--spacing-xl);
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__link {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-family-roboto);
+    font-weight: var(--font-weight-regular);
+}
+
+.nav__link:hover {
+    opacity: 0.75;
+}
+
+.nav__link--button {
+    background: var(--white);
+    color: var(--green-medium);
+    padding: var(--spacing-xs) var(--spacing-s);
+    border-radius: var(--border-radius-large);
+}
 
 .hero__image {
     align-self: flex-start;
@@ -163,7 +201,7 @@ p {
 .hero__button {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-s) var(--spacing-xl);
-    border-radius: 100px;
+    border-radius: var(--border-radius-large);
     background-color: var(--cyan-light);
     color: var(--cyan-dark);
     text-transform: uppercase;
