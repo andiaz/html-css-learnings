@@ -48,6 +48,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    max-width: 75ch;
+}
+
 /*******************/
 /* Utility classes */
 /*******************/
@@ -144,7 +148,8 @@ img {
 }
 
 .pitch__paragraph,
-.feature__paragraph {
+.feature__paragraph,
+.hero__paragraph {
     line-height: var(--line-height-medium);
 }
 
@@ -164,6 +169,7 @@ img {
     text-transform: uppercase;
     font-weight: var(--font-weight-bold);
     letter-spacing: 5%;
+    border: none;
 }
 
 .hero__button:hover {
