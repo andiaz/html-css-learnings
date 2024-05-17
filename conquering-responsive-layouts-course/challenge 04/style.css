@@ -42,6 +42,7 @@
     --line-height-medium: 1.5;
     --line-height-small: 1.2;
 
+    --border-radius-medium: 10px;
     --border-radius-large: 100px;
 }
 
@@ -153,7 +154,7 @@ p {
 
 .hero__image {
     align-self: flex-start;
-    border-radius: 10px;
+    border-radius: var(--border-radius-medium);
 }
 
 .hero__header {
@@ -168,6 +169,7 @@ p {
 .feature {
     padding: var(--spacing-l);
     align-self: flex-start;
+    border-radius: var(--border-radius-medium);
 }
 
 .pitch {
