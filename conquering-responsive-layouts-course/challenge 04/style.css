@@ -241,3 +241,21 @@ p {
     text-align: center;
     margin-top: var(--spacing-m);
 }
+
+@media (max-width: 600px) {
+    .hero__image {
+        width: 100%;
+        order: -1;
+    }
+    .hero__header,
+    .hero__paragraph,
+    .feature,
+    .pitch {
+        width: 100%;
+    }
+
+    .hero > *,
+    .maincontent {
+        flex-direction: column;
+    }
+}
