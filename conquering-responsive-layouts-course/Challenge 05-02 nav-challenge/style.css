@@ -155,6 +155,18 @@ header {
     background-color: #23424A;
 }
 
+.nav__link--button {
+    width: auto;
+}
+
+.nav__link--button,
+.nav__link--button:hover {
+    background-color: #FFF;
+    opacity: 1;
+    color: #072A2D;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
 
 .logo {
     height: 30px;
@@ -219,6 +231,12 @@ header > .row {
     .nav__link:hover {
         background-color: #136c72;
         text-decoration: underline;
+    }
+
+    .nav__link--button:hover {
+        background-color: #FFF;
+        text-decoration: none;
+        opacity: 80%;
     }
 
     .row {
