@@ -142,6 +142,7 @@ h3,
     opacity: 0.8;
     border: none;
     text-decoration: none;
+    text-transform: uppercase;
     
     display: block;
     width: 100%;
