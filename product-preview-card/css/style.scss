@@ -47,7 +47,7 @@ padding: 0;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
+min-height: 100vh;
 }
 
 .product {
@@ -77,6 +77,7 @@ border-top-left-radius: $border-radius-medium;
 
 .product__content {
 padding: 32px;
+width: 50%;
 }
 
 .product__overline {
@@ -154,6 +155,16 @@ margin: 0;
   cursor: pointer;
 }
 
+.product__button:focus {
+  background-color: $deep-aquamarine-hover;
+}
+
+.product__button::before {
+  content: url('../images/icon-cart.svg');
+  display: inline-block;
+  margin-right: 8px; /* Adjust this value to add space between the image and the text */
+}
+
 .button__image {
   color: $pure-white;
 }
@@ -191,6 +202,7 @@ margin: 0;
 
   .product__content {
     padding: 24px;
+    width: 100%;
   }
 
   .product__header,
