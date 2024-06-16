@@ -44,6 +44,10 @@
     background-color: var(--off-white);
   }
 
+  h1 {
+    display: none;
+  }
+
   h2 {
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-semi-bold);
