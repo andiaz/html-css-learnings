@@ -10,6 +10,7 @@
 } 
 
 :root {
+  --white: #FFFFFF;
   --light-grey: #FAFAFA;
   --black: #4D4F62;
   --red: #EA5454;
@@ -131,7 +132,7 @@ h1 {
 }
 
 .box {
-  background-color: var(white);
+  background-color: var(--white);
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
   border-radius: var(--border-radius-small);
   padding: 28px;
