@@ -172,6 +172,11 @@ h1 {
   .flex {
     flex-direction: row;
   }
+
+  .box {
+    padding: 32px;
+  }
+  
   .box--red,
   .box--cyan,
   .box--blue,
