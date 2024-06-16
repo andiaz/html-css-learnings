@@ -126,3 +126,52 @@
   .testimonial__quote--light-grey {
     color: var(--light-grey);
   }
+
+  @media (min-width: 1024px) {
+    body {
+        margin: 164px 24px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    .testimonials__section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 24px;
+      grid-template-areas: 
+        "purple purple grey white-one" 
+        "white-two black black white-one";
+    }
+
+    .testimonial {
+        margin-bottom: 0;
+    }
+
+    .testimonial--purple {
+        grid-area: purple;
+        background-position: right 80px top;
+    }
+
+    .testimonial--grey {
+        grid-area: grey;
+    }
+
+    .testimonial--black {
+        grid-area: black;
+        padding-bottom: 26px;
+    }
+
+    .testimonial--white-one {
+        grid-area: white-one;
+        padding-bottom: 26px;
+    }
+
+    .testimonial--white-two {    
+        grid-area: white-two;
+        padding-bottom: 26px;
+    }
+  }
