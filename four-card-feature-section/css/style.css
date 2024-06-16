@@ -33,13 +33,14 @@
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
 
-  --letter-spacing-large: 0.17px;
-  --letter-spacing-medium: 0.1px;
   --letter-spacing-small: 0.09px;
+  --letter-spacing-medium: 0.1px;
+  --letter-spacing-large: 0.17px;
+  --letter-spacing-xl: 0.25px;
 
-  --line-height-medium: 1.5;
-  --line-height-small: 1.2;
   --line-height-none: 1;
+  --line-height-small: 1.2;
+  --line-height-medium: 1.5;
 
   --border-radius-small: 8px;
 }
@@ -182,5 +183,20 @@ h1 {
   .column {
     width: auto;
     flex: 1 1 250px;
+  }
+
+  .hero__subtitle,
+  h1 {
+    font-size: var(--font-size-xxl);
+    letter-spacing: var(--letter-spacing-xl);
+  }
+}
+
+@media (max-width: 296px) {
+  .box--red,
+  .box--cyan,
+  .box--blue,
+  .box--yellow {
+    min-height: auto;
   }
 }
