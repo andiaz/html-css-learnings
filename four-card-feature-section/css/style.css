@@ -96,10 +96,6 @@ h2 {
   width: 100%;
 }
 
-h1 {
-  margin-bottom: 16px;
-}
-
 .hero__section {
   max-width: 540px;
   margin: 0 auto;
@@ -116,12 +112,15 @@ h1,
   font-weight: var(--font-weight-extra-light);
   font-size: var(--font-size-xl);
   letter-spacing: var(--letter-spacing-large);
+  line-height: var(--line-height-medium);
 }
 
 h1 {
   font-weight: var(--font-weight-semi-bold);
   font-size: var(--font-size-xl);
   letter-spacing: var(--letter-spacing-large);
+  line-height: var(--line-height-medium);
+  margin-bottom: 16px;
 }
 
 .hero__text {
@@ -190,6 +189,14 @@ h1 {
   h1 {
     font-size: var(--font-size-xxl);
     letter-spacing: var(--letter-spacing-xl);
+  }
+
+  .hero__section {
+    margin-bottom: 64px;
+  }
+
+  .box__text {
+    margin-bottom: 40px;
   }
 }
 
