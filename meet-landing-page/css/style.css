@@ -245,3 +245,49 @@ p {
 .footer__header {
     margin-bottom: 24px;
 }
+
+@media (min-width: 768px) {
+
+    .hero__logo {
+        margin-bottom: 64px;
+    }
+
+    .hero__images {
+        margin-bottom: 72px;
+    }
+
+    .hero__description {
+        max-width: 457px;
+    }
+
+    .hero__buttons {
+        flex-direction: row;
+    }
+
+    .hero {
+        margin-bottom: 80px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+        column-gap: 11px;
+    }
+
+    .benefit {
+        margin: 67px 24px 48px 24px;
+    }
+
+    .footer__section {
+        padding: 92px 24px 66px 24px;
+    }
+
+    .footer__header {
+        margin-bottom: 32px;
+    }
+
+    .footer__paragraph {
+        max-width: 573px;
+        margin-bottom: 40px;
+    }
+}
