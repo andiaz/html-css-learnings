@@ -316,6 +316,10 @@ p {
         margin: 67px 24px 48px 24px;
     }
 
+    .benefit__header {
+        max-width: 445px;
+    }
+
     .benefit__paragraph {
         max-width: 573px;
     }
