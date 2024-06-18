@@ -280,6 +280,7 @@ p {
 
     .footer__section {
         padding: 92px 24px 66px 24px;
+        background: linear-gradient(0deg, rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url(../assets/tablet/image-footer.jpg);
     }
 
     .footer__header {
