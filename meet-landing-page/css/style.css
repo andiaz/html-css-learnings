@@ -372,6 +372,7 @@ p {
         font-size: var(--font-size-3xl);
         line-height: var(--line-height-3xl);
         margin-bottom: 34px;
+        margin-top: 47px;
     }
 
     p {
