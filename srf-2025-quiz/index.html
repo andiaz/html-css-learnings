@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sweden Rock Bandval</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #111 0%, #222 100%);
+        color: #eee;
+        margin: 0;
+        padding: 0 20px;
+      }
+      h1 {
+        color: #ffd700;
+        text-align: center;
+        margin-top: 20px;
+      }
+      form {
+        max-width: 700px;
+        margin: auto;
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .question {
+        margin-bottom: 30px;
+      }
+      label {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+      }
+      button {
+        background-color: #ffd700;
+        color: #111;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto 0;
+      }
+      #results {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #2a2a2a;
+        border: 1px solid #444;
+        border-radius: 8px;
+      }
+      .band {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .band a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .band a:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 600px) {
+        .band {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .band img {
+          width: 100%;
+          max-width: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vilket band ska du se på Sweden Rock?</h1>
+    <form id="quizForm">
+      <div class="question">
+        <strong>1. Vad vill du helst att ett band sjunger om?</strong>
+        <label
+          ><input type="radio" name="q1" value="sabaton" /> Historiska slag och
+          krigshjältar</label
+        >
+        <label
+          ><input type="radio" name="q1" value="slipknot" /> Inre ångest, ilska
+          och mörker</label
+        >
+        <label
+          ><input type="radio" name="q1" value="wind_rose" /> Mystik, fantasy
+          och saga</label
+        >
+        <label
+          ><input type="radio" name="q1" value="crazy_lixx" /> Kärlek, fest och
+          rock’n’roll-liv</label
+        >
+        <label
+          ><input type="radio" name="q1" value="sex_pistols" /> Samhällskritik
+          och uppror</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>2. Hur tungt får det vara?</strong>
+        <label
+          ><input type="radio" name="q2" value="meshuggah" /> Riktigt tungt och
+          brutalt</label
+        >
+        <label
+          ><input type="radio" name="q2" value="opeth" /> Tungt men
+          melodiskt</label
+        >
+        <label
+          ><input type="radio" name="q2" value="within_temptation" /> Lagom ös
+          med storslagna refränger</label
+        >
+        <label
+          ><input type="radio" name="q2" value="night_flight" /> Lätt och glatt
+          – något att dansa till</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>3. Hur viktig är showen för dig?</strong>
+        <label
+          ><input type="radio" name="q3" value="slipknot" /> Ju galnare desto
+          bättre</label
+        >
+        <label
+          ><input type="radio" name="q3" value="scorpions" /> Snygga scenkläder
+          och allsång</label
+        >
+        <label
+          ><input type="radio" name="q3" value="myles_kennedy" /> Det handlar om
+          musiken</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>4. Vilken era älskar du mest?</strong>
+        <label
+          ><input type="radio" name="q4" value="hardline" /> 70/80-tal</label
+        >
+        <label><input type="radio" name="q4" value="slipknot" /> 90-tal</label>
+        <label
+          ><input type="radio" name="q4" value="within_temptation" />
+          2000-tal</label
+        >
+        <label
+          ><input type="radio" name="q4" value="orbit_culture" /> Nutiden</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>5. Hur smutsigt och rått får det vara?</strong>
+        <label
+          ><input type="radio" name="q5" value="sex_pistols" /> Gärna skitigt
+          och punkigt</label
+        >
+        <label
+          ><input type="radio" name="q5" value="sabaton" /> Polerat och
+          episkt</label
+        >
+        <label
+          ><input type="radio" name="q5" value="the_warning" /> Det ska svänga
+          och låta lite farligt</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>6. Vad säger du om genreblandningar?</strong>
+        <label
+          ><input type="radio" name="q6" value="jinjer" /> Gärna! Blanda
+          på!</label
+        >
+        <label
+          ><input type="radio" name="q6" value="scorpions" /> Nej tack, jag
+          gillar det rent</label
+        >
+        <label
+          ><input type="radio" name="q6" value="soen" /> Lite blandning är
+          kul</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>7. Hur viktigt är ett kompromisslöst arrangemang?</strong>
+        <label
+          ><input type="radio" name="q7" value="meshuggah" /> Avgörande!
+          Kompromisser är för svaga</label
+        >
+        <label
+          ><input type="radio" name="q7" value="guenna" /> Lagom kompromisslöst,
+          tack</label
+        >
+        <label
+          ><input type="radio" name="q7" value="dream_theater" /> Jag gillar
+          hellre episka eller kreativa arrangemang</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>8. Vilken typ av arrangemang tilltalar dig mest?</strong>
+        <label
+          ><input type="radio" name="q8" value="sabaton" /> Storslagna och
+          episka</label
+        >
+        <label
+          ><input type="radio" name="q8" value="dream_theater" /> Kreativa och
+          nyskapande</label
+        >
+        <label
+          ><input type="radio" name="q8" value="guenna" /> Fullproppade och
+          melodiska</label
+        >
+        <label
+          ><input type="radio" name="q8" value="meshuggah" /> Kompromisslösa.
+          Punkt.</label
+        >
+        <label
+          ><input type="radio" name="q8" value="the_warning" /> Jag vill bara ha
+          ett svängigt riff</label
+        >
+      </div>
+
+      <div class="question">
+        <strong>9. Hur mycket “samtida edge” kräver du i din musik?</strong>
+        <label
+          ><input type="radio" name="q9" value="cyhra" /> Edge i varje
+          refräng</label
+        >
+        <label
+          ><input type="radio" name="q9" value="hardline" /> Hellre gammalt
+          sväng än ny vasshet</label
+        >
+        <label
+          ><input type="radio" name="q9" value="scorpions" /> Bara band som
+          bildats innan 1990</label
+        >
+        <label
+          ><input type="radio" name="q9" value="meshuggah" /> Så spetsigt att
+          det skär</label
+        >
+      </div>
+      <button type="submit">Se vilka band du bör kolla in!</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+      let bandScores = {};
+
+      const bandData = {
+        sabaton: {
+          name: 'Sabaton',
+          spotify: 'https://open.spotify.com/artist/3o2dn2O0FCVsWDFSh8qxgG',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb1a3e2a20f3b2f5ea2f9edc23',
+        },
+        slipknot: {
+          name: 'Slipknot',
+          spotify: 'https://open.spotify.com/artist/05fG473iIaoy82BF1aGhL8',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebb2f75e4264b1f55eb36e7d45',
+        },
+        wind_rose: {
+          name: 'Wind Rose',
+          spotify: 'https://open.spotify.com/artist/67ps5pbKVO7V9Fcb4lTIXz',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb08e99cefbfc1228b801fc594',
+        },
+        crazy_lixx: {
+          name: 'Crazy Lixx',
+          spotify: 'https://open.spotify.com/artist/24k1UCsJJHHU9ohk7YIvzC',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb9fffc6e6fd95fd37c85720a2',
+        },
+        sex_pistols: {
+          name: 'Sex Pistols',
+          spotify: 'https://open.spotify.com/artist/24k1UCsJJHHU9ohk7YIvzC',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb9abf0f9c1c9831d593d293e3',
+        },
+        meshuggah: {
+          name: 'Meshuggah',
+          spotify: 'https://open.spotify.com/artist/3ggwAqZD3lyT2sbovlmfQY',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb86fa8e9e67a3c6f3cb7e0a7c',
+        },
+        opeth: {
+          name: 'Opeth',
+          spotify: 'https://open.spotify.com/artist/0ybFZ2Ab08V8hueghSXm6E',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebf64a206f93e3eec9d54cf55a',
+        },
+        within_temptation: {
+          name: 'Within Temptation',
+          spotify: 'https://open.spotify.com/artist/3hE8S8ohRErocpkY7uJW4a',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebfc1f0f1cbcbdb509a81c195d',
+        },
+        night_flight: {
+          name: 'The Night Flight Orchestra',
+          spotify: 'https://open.spotify.com/artist/6xPOeIDWmM9ooOw7SBknMl',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebf68a066f2659b0a6b25cbd92',
+        },
+        scorpions: {
+          name: 'Scorpions',
+          spotify: 'https://open.spotify.com/artist/27T030eWyCQRmDyuvr1kxY',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb1ebcb6235b55602580ef2e5b',
+        },
+        myles_kennedy: {
+          name: 'Myles Kennedy',
+          spotify: 'https://open.spotify.com/artist/2YZOQlBE1v44RxPEAVSdVR',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb132e8d5cf3c8c01d9f6a7f0a',
+        },
+        orbit_culture: {
+          name: 'Orbit Culture',
+          spotify: 'https://open.spotify.com/artist/7k29FbDq69ju2fe6zTskxY',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb97f3f44d2d12d44f02fc8482',
+        },
+        jinjer: {
+          name: 'Jinjer',
+          spotify: 'https://open.spotify.com/artist/7o6cOczXTB8ioTAAJTbESf',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb13b1c748e09040cde539cd3d',
+        },
+        soen: {
+          name: 'Soen',
+          spotify: 'https://open.spotify.com/artist/38uWD5h115pdz278q4rwZW',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebbc75c9b9f76d1e7cbe4048e3',
+        },
+        guenna: {
+          name: 'Guenna',
+          spotify: 'https://open.spotify.com/artist/2fATyU7WXX6vVre5FoD0YM',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb8e967f4a16c1de90c8e73e14',
+        },
+        dream_theater: {
+          name: 'Dream Theater',
+          spotify: 'https://open.spotify.com/artist/2aaLAng2L2aWD2FClzwiep',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb20177d53ab39e10ed4997e75',
+        },
+        the_warning: {
+          name: 'The Warning',
+          spotify: 'https://open.spotify.com/artist/2SmW1lFlBJn4IfBzBZDlSh',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb00ae4b6101b998dc52ee1a76',
+        },
+        cyhra: {
+          name: 'Cyhra',
+          spotify: 'https://open.spotify.com/artist/6tkhw6PSVw7b2M7h5fLBLE',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5ebc92bc3ed81e19fd3ff3951e9',
+        },
+        hardline: {
+          name: 'Hardline',
+          spotify: 'https://open.spotify.com/artist/3caJ5Uy9aHZv7wVSNqwwjc',
+          image:
+            'https://i.scdn.co/image/ab6761610000e5eb1c74dc8f3a96fdf09e9c6307',
+        },
+      };
+
+      document
+        .getElementById('quizForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault();
+          bandScores = {};
+          const formData = new FormData(this);
+          formData.forEach((value) => {
+            bandScores[value] = (bandScores[value] || 0) + 1;
+          });
+
+          const sorted = Object.entries(bandScores).sort((a, b) => b[1] - a[1]);
+          const topBands = sorted.slice(0, 3).map((entry) => entry[0]);
+
+          const resultHtml = topBands
+            .map((key) => {
+              const band = bandData[key];
+              if (!band)
+                return `<p>${key.replace(/_/g, ' ').toUpperCase()}</p>`;
+              return `
+          <div class="band">
+  <a href="${band.spotify}" target="_blank">${band.name}</a><br>
+</div>
+          </div>
+        `;
+            })
+            .join('');
+
+          document.getElementById('results').innerHTML = `
+        <h2>Dina mest matchande band:</h2>
+        ${resultHtml}
+      `;
+        });
+    </script>
+  </body>
+</html>
