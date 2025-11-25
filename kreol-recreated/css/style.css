@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --color-grey-light: #f6f7f8;
+  --color-grey-light-2: #f0f1f2;
+  --color-grey-medium: #647585;
+  --color-orange: #f18a00;
+  --color-blue-dark: rgb(19, 136, 154);
+  --color-blue-light: #3a99ac;
+  --color-grey-dark: #232c39;
+  --color-red: #cb1517;
+  --color-red-dark: #842024;
+  --color-black: #000;
+
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+  --font-size-xl: 24px;
+  --font-sie-xl: 32px;
+  --font-size-xxl: 48px;
+  --font-size-3xl: 70px;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+
+  --line-height-none: 1;
+  --line-height-small: 18px;
+  --line-height-medium: 24px;
+
+  --spacing-xs: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  --border-radius-small: 4px;
+
+  --shadow-medium: 0 2rem 2rem -1rem rgba(35, 44, 57, 0.05);
+  --shadow-medium-2: 0 27px 40px -20px rgba(35, 44, 57, 0.11);
+  --shadow-medium-2-hover: 0 27px 40px -20px rgba(35, 44, 57, 0.22);
+}
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: var(--color-blue-dark);
+  padding: var(--spacing-small) 0;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+p {
+  font-size: var(--font-size-large);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.hero {
+  background-color: var(--color-blue-light);
+  padding: var(--spacing-medium);
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  align-items: center;
+  text-align: center;
+}
+
+.red {
+  color: var(--color-red-dark);
+}
+
+.white {
+  color: var(--white);
+}
