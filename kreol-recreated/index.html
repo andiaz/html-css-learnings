@@ -4,29 +4,383 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <title>KREOL of Sweden AB</title>
   </head>
-  <body>
-    <header>
-      <div class="wrapper">
-        <img src="./images/kreol-logo.png" alt="KEOL - logotyp" />
+  <body id="top">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="">
+          <img
+            src="./images/kreol-logo.png"
+            alt="KREOL of Sweden"
+            class="site-header__logo"
+          />
+        </a>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <div class="wrapper">
-          <div class="hero__content">
-            <h1>KREOL of Sweden</h1>
-            <div class="hero__copy">
-              <p class="red">Handen på hjärtat . . .</p>
-              <p class="white">Är Era resurser optimerade?</p>
-              <p class="red">
-                Vi hjälper Er att ta kontroll över Era processer!
-              </p>
-            </div>
+          <div class="hero__inner">
+            <h1 class="hero__title">
+              KRE<span class="text-red">OL</span> of Sweden
+            </h1>
+            <p class="hero__eyebrow">Handen på hjärtat...</p>
+            <p class="hero__title">Är era resurser optimerade?</p>
+            <p class="hero__subtitle">
+              Vi hjälper er att ta kontroll över era processer.
+            </p>
+            <a href="#" class="hero__button button button--primary">
+              Se våra erbjudanden
+            </a>
           </div>
         </div>
       </section>
+      <section class="services">
+        <div class="services__container">
+          <div class="services__item">
+            <div class="services__icon">
+              <i class="fa fa-eyedropper"></i>
+            </div>
+            <h3 class="services__title">Formsprutning</h3>
+            <p class="services__text">
+              Vi har 30 års erfarenhet inom process-, produkt- och
+              kompetensutveckling för formsprutning.
+            </p>
+          </div>
+
+          <div class="services__item">
+            <div class="services__icon">
+              <i class="fa fa-repeat"></i>
+            </div>
+            <h3 class="services__title">Processutveckling</h3>
+            <p class="services__text">
+              Vi hjälper dig att felsöka och optimera era
+              formsprutningsprocesser.
+            </p>
+          </div>
+
+          <div class="services__item">
+            <div class="services__icon">
+              <i class="fa-regular fa-lightbulb"></i>
+            </div>
+            <h3 class="services__title">Produktutveckling</h3>
+            <p class="services__text">
+              Vi designar, bereder och optimerar era produkter. Tillsammans
+              skapar vi smarta och kreativa lösningar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers">
+        <div class="offers__header">
+          <h2 class="offers__title">Våra erbjudanden</h2>
+          <p class="offers__subtitle">
+            Vår specialitet är kundanpassade lösningar.
+          </p>
+        </div>
+
+        <div class="offers__grid">
+          <article class="offers__card">
+            <div class="offers__image-wrapper">
+              <img
+                src="./images/formsprutning.jpg"
+                alt="Formsprutningsutbildning"
+                class="offers__image"
+              />
+            </div>
+            <div class="offers__content">
+              <h3 class="offers__card-title">
+                Företagsanpassad formsprutningsutbildning
+              </h3>
+              <p class="offers__card-text">
+                KRE<span class="text-red">OL</span> of Sweden erbjuder grund-
+                och spetsutbildningar inom formsprutning, anpassade efter er
+                produktion och personal.
+              </p>
+              <a href="#" class="offers__link">
+                Läs mer
+                <i
+                  class="fa-solid fa-arrow-right offers__link-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="offers__card">
+            <div class="offers__image-wrapper">
+              <img
+                src="./images/optimering-verktygs-temperering.jpg"
+                alt="Optimering av verktygstemperering"
+                class="offers__image"
+              />
+            </div>
+            <div class="offers__content">
+              <h3 class="offers__card-title">
+                Optimering av verktygstemperering
+              </h3>
+              <p class="offers__card-text">
+                Tillsammans analyserar vi era befintliga flöden och tar fram
+                lösningar som minskar cykeltid och ger jämnare kvalitet.
+              </p>
+              <a href="#" class="offers__link">
+                Läs mer
+                <i
+                  class="fa-solid fa-arrow-right offers__link-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="offers__card">
+            <div class="offers__image-wrapper">
+              <img
+                src="./images/afs.jpg"
+                alt="Analytisk felsökning"
+                class="offers__image"
+              />
+            </div>
+            <div class="offers__content">
+              <h3 class="offers__card-title">Analytisk felsökning (AFS)</h3>
+              <p class="offers__card-text">
+                Metodstöd och utbildning i strukturerad felsökning som ger er
+                bättre kontroll vid problem i plast- och gummiproduktion.
+              </p>
+              <a href="#" class="offers__link">
+                Läs mer
+                <i
+                  class="fa-solid fa-arrow-right offers__link-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="about-strip">
+        <div class="about-strip__inner">
+          <p class="about-strip__text">
+            Vårt namn KRE<span class="text-red">OL</span> är en förkortning av
+            begreppet ”Kreativa Olikheter” som kommer ur vår övertygelse om att
+            det krävs en blandning av olika personligheter för att uppnå en
+            kreativ och näringsrik arbetsmiljö.
+          </p>
+
+          <a href="#contact" class="about-strip__button button button--primary">
+            Kontakta oss
+          </a>
+        </div>
+      </section>
+      <section class="cases">
+        <div class="cases__header">
+          <h2 class="cases__title">Tidigare uppdrag</h2>
+          <p class="cases__subtitle">
+            Vi löser dina affärsproblem med kreativa lösningar. Till exempel:
+          </p>
+        </div>
+
+        <div class="cases__grid">
+          <!-- Case 1 -->
+          <a href="/uppdrag/formsprutningsutbildning" class="cases__card">
+            <div class="cases__image-wrapper">
+              <img
+                src="./images/formsprutningsutbildning.jpg"
+                alt="Företagsanpassad formsprutningsutbildning"
+                class="cases__image"
+              />
+              <div class="cases__overlay">
+                <span class="cases__overlay-text">
+                  Företagsanpassad formsprutningsutbildning?
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Case 2 -->
+          <a
+            href="/uppdrag/kylsystemsoptimering-hammarplast"
+            class="cases__card"
+          >
+            <div class="cases__image-wrapper">
+              <img
+                src="./images/injustering-av-kylsystem.png"
+                alt="Kylsystemsoptimering, Hammarplast AB"
+                class="cases__image"
+              />
+              <div class="cases__overlay">
+                <span class="cases__overlay-text">
+                  Kylsystemsoptimering, Hammarplast AB
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Case 3 -->
+          <a href="/uppdrag/guide-for-bioplaster" class="cases__card">
+            <div class="cases__image-wrapper">
+              <img
+                src="./images/guide-för-bioplaster.png"
+                alt="Framtagning av Guide för bioplaster"
+                class="cases__image"
+              />
+              <div class="cases__overlay">
+                <span class="cases__overlay-text">
+                  Framtagning av &quot;Guide för bioplaster&quot;
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="testimonials" id="testimonials">
+        <div class="testimonials__header">
+          <h2 class="testimonials__title">Kundreferenser</h2>
+          <p class="testimonials__subtitle">
+            Några ord från företag som anlitat KRE<span class="text-red"
+              >OL</span
+            >
+            of Sweden.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonials__card">
+            <div class="testimonials__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonials__quote">
+              Orthex Sweden AB har genom åren anlitat KRE<span class="text-red"
+                >OL</span
+              >
+              för bl.a. formsprutningsutbildningar samt hjälp med att
+              effektivisera vårt kylvattensystem. Vi är mycket nöjda med allt
+              och i synnerhet med projektet att effektivisera vårt
+              kylvattensystem som KRE<span class="text-red">OL</span> genomförde
+              på ett proffsigt sätt och bidrog med stor kunskap.
+            </p>
+            <p class="testimonials__author">Mikael Fransson</p>
+            <p class="testimonials__role">Underhållschef, Orthex Sweden AB</p>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonials__card">
+            <div class="testimonials__rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonials__quote">
+              Pekå Plast AB anlitade Mats på KRE<span class="text-red">OL</span>
+              för en anpassad formsprutningsutbildning på plats i vår fabrik i
+              Perstorp. Utifrån våra behov skapade Mats även en skräddarsydd
+              utbildningsdokumentation. Vi är väldigt nöjda och kommer säkert
+              nyttja hans kunskaper i framtiden.
+            </p>
+            <p class="testimonials__author">Nabil Chamli</p>
+            <p class="testimonials__role">VD, Pekå Plast AB</p>
+          </article>
+
+          <!-- Optional: Testimonial 3 -->
+          <!--
+          <article class="testimonials__card">
+            ...
+          </article>
+          -->
+        </div>
+      </section>
+      <section class="cta-strip">
+        <div class="cta-strip__inner">
+          <h2 class="cta-strip__title">Jobba tillsammans med oss</h2>
+          <p class="cta-strip__subtitle">
+            Kontakta oss så hjälper vi dig med din verksamhet.
+          </p>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__inner">
+          <!-- Social media -->
+          <div class="footer__column footer__column--social">
+            <h3 class="footer__heading">Social media</h3>
+            <p class="footer__text">Följ oss på sociala medier:</p>
+
+            <div class="footer__social-list">
+              <a
+                href="https://www.facebook.com"
+                class="footer__social-link"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="footer__social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kontaktinfo -->
+          <div class="footer__column footer__column--contact">
+            <h3 class="footer__heading">Kontakta oss</h3>
+
+            <p class="footer__text">
+              Kuggebodavägen 68<br />
+              372 94 Ronneby<br />
+              Sverige
+            </p>
+
+            <ul class="footer__contact-list">
+              <li class="footer__contact-item">
+                <i class="fa-solid fa-location-dot footer__contact-icon"></i>
+                <a href="#" class="footer__contact-link">Vägbeskrivning</a>
+              </li>
+              <li class="footer__contact-item">
+                <i class="fa-solid fa-phone footer__contact-icon"></i>
+                <a href="tel:+46733966900" class="footer__contact-link"
+                  >0733 - 96 69 00</a
+                >
+              </li>
+              <li class="footer__contact-item">
+                <i class="fa-regular fa-envelope footer__contact-icon"></i>
+                <a
+                  href="mailto:mats.svensson@kreol.se"
+                  class="footer__contact-link"
+                >
+                  mats.svensson@kreol.se
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            Copyright © 2025 · Mats Svensson KRE<span class="text-red">OL</span>
+            of Sweden AB.
+          </p>
+
+          <a href="#top" class="footer__back-to-top" aria-label="Till toppen">
+            <i class="fa-solid fa-chevron-up"></i>
+          </a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

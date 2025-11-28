@@ -59,14 +59,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-header {
-  background-color: var(--color-blue-dark);
-  padding: var(--spacing-small) 0;
 }
 
 h1 {
@@ -76,34 +75,889 @@ h1 {
   color: var(--white);
 }
 
-p {
-  font-size: var(--font-size-large);
-  line-height: 1.5;
-  font-weight: 500;
+/* ---------------- Simple Logo Header ---------------- */
+/* ---------------- Gradient Header ---------------- */
+
+.site-header {
+  background-color: #13889a;
+  padding: 1.75rem 1rem;
 }
 
-.wrapper {
+.site-header__inner {
+  max-width: 1100px;
   margin: 0 auto;
-  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.site-header__logo {
+  height: 90px; /* adjust if too big/small */
+  width: auto;
+  display: block;
+
+  padding: 0.35rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.4rem;
+
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* ---------------- Hero ---------------- */
 
 .hero {
-  background-color: var(--color-blue-light);
-  padding: var(--spacing-medium);
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  color: #ffffff;
+  text-align: center;
+
+  /* Bakgrundsbild + blått lager ovanpå */
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.8),
+      rgba(0, 105, 140, 0.7)
+    ),
+    url('../images/hero_image_bg.jpg'); /* Byt till din egen bild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-medium);
-  align-items: center;
+/* Panel bakom texten för bättre kontrast */
+.hero__inner {
+  max-width: 800px;
+  padding: 2rem 1.5rem;
+  background-color: rgba(0, 25, 45, 0.55);
+  border-radius: 0.5rem;
+}
+
+/* Översta raden - röd men mer läsbar */
+.hero__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff5555; /* röd kopplad till loggan, men på mörk panel */
+}
+
+/* Huvudrubrik */
+.hero__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Underrubrik */
+.hero__subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* ---------------- Knappar ---------------- */
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: #f39c12; /* orange likt exemplet */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background-color: #d98000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------- Services Section ---------------- */
+
+.services {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.red {
-  color: var(--color-red-dark);
+.services__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
-.white {
-  color: var(--white);
+.services__item {
+  padding: 0 1rem;
+}
+
+.services__icon {
+  font-size: 3rem;
+  color: #f39c12; /* orange accent */
+  margin-bottom: 1.2rem;
+}
+
+.services__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: #1b2a33;
+}
+
+.services__text {
+  font-size: 1rem;
+  color: #47525d;
+  line-height: 1.55;
+}
+
+/* ---------------- Offers Section ---------------- */
+
+.offers {
+  padding: 4rem 1.5rem 5rem;
+  background-color: #f6f7f8;
+}
+
+.offers__header {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.offers__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1b2a33;
+}
+
+.offers__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #6b7680;
+}
+
+.offers__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Kort */
+
+.offers__card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.offers__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+/* Subtle bottom-gradient overlay */
+.offers__image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.offers__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.25s ease;
+}
+
+.offers__card:hover .offers__image {
+  transform: scale(1.06);
+}
+
+.offers__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.offers__card-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b2a33;
+}
+
+.offers__card-text {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5661;
+  flex-grow: 1;
+}
+
+/* CTA-länk istället för stor knapp */
+
+.offers__link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background-color: #f39c12;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.offers__link-icon {
+  font-size: 0.9rem;
+}
+
+.offers__link:hover,
+.offers__link:focus-visible {
+  background-color: #d98000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* --- Red OL utility --- */
+.text-red {
+  color: #ff5555;
+}
+
+/* --- About Strip Section --- */
+
+.about-strip {
+  position: relative;
+  padding: 3.5rem 1.5rem;
+  color: #ffffff;
+  text-align: center;
+
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.85),
+      rgba(0, 105, 140, 0.85)
+    ),
+    url('../images/kreol-bakgrund-namn.jpg'); /* byt till din bild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-strip__inner {
+  max-width: 850px;
+  padding: 2rem 1.5rem;
+  background-color: rgba(0, 25, 45, 0.45);
+  border-radius: 0.5rem;
+}
+
+.about-strip__text {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-strip__button {
+  padding-inline: 2rem;
+}
+
+/* ---------------- Cases / Previous Work ---------------- */
+
+.cases {
+  padding: 4rem 1.5rem 5rem;
+  background-color: #fff;
+}
+
+.cases__header {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.cases__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b2a33;
+}
+
+.cases__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #6b7680;
+}
+
+.cases__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+/* Kortet är hela länken */
+.cases__card {
+  display: block;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+}
+
+.cases__image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.cases__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Overlay med text */
+.cases__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cases__overlay-text {
+  padding: 0 1.5rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Hover/focus-effekt */
+.cases__card:hover .cases__image,
+.cases__card:focus-visible .cases__image {
+  transform: scale(1.06);
+  filter: brightness(0.9);
+}
+
+.cases__card:hover .cases__overlay,
+.cases__card:focus-visible .cases__overlay {
+  opacity: 1;
+}
+
+/* -------- Testimonials -------- */
+
+.testimonials {
+  padding: 4rem 1.5rem 4.5rem;
+  background-color: #f3f6fa;
+}
+
+.testimonials__header {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.testimonials__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1b2a33;
+}
+
+.testimonials__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: #6b7680;
+}
+
+.testimonials__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Cards kept compact but airy */
+.testimonials__card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+/* Stars */
+.testimonials__rating {
+  color: #f39c12;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+/* Gör att quote-delen tar all ledig höjd */
+.testimonials__quote {
+  margin: 0 0 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #4a5661;
+  flex-grow: 1; /* <-- viktigt */
+}
+
+/* Placera namn + roll i bottendelen */
+.testimonials__author {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #1b2a33;
+}
+
+.testimonials__role {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  color: #7a8694;
+}
+
+/* ---------------- CTA Strip ---------------- */
+
+.cta-strip {
+  position: relative;
+  padding: 5rem 1.5rem;
+  color: #ffffff;
+
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.6),
+      rgba(0, 105, 140, 0.85)
+    ),
+    url('../images/kreol-background.jpg'); /* byt till din egen bild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cta-strip__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cta-strip__title {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cta-strip__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* ---------------- Footer ---------------- */
+
+.footer {
+  background-color: #004957; /* mörk blågrön */
+  color: #ffffff;
+  padding: 3.5rem 1.5rem 2.5rem;
+}
+
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.footer__column {
+  flex: 1 1 260px;
+  min-width: 240px;
+}
+
+.footer__heading {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer__text {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Social icons */
+
+.footer__social-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__social-link {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #1b2a33;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
+  background-color: #f39c12;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Kontaktlista */
+
+.footer__contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer__contact-icon {
+  font-size: 1rem;
+  min-width: 1rem;
+}
+
+.footer__contact-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer__contact-link:hover,
+.footer__contact-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Bottom row */
+
+.footer__bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__back-to-top {
+  width: 34px;
+  height: 34px;
+  border-radius: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer__back-to-top:hover,
+.footer__back-to-top:focus-visible {
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+/* ---------------- Case Hero ---------------- */
+
+.case-hero {
+  position: relative;
+  color: #ffffff;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  overflow: hidden;
+}
+
+/* Background image + overlay */
+.case-hero__background {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.82),
+      rgba(0, 105, 140, 0.82)
+    ),
+    url('images/case-formsprutning-hero.jpg'); /* byt per case */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.case-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.case-hero__title {
+  margin: 0 0 0.5rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.case-hero__subtitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.97;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .case-hero {
+    min-height: 50vh;
+    padding: 5rem 2rem 3.5rem;
+  }
+
+  .case-hero__title {
+    font-size: 2.9rem;
+  }
+
+  .case-hero__subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* ---------------- Case Content ---------------- */
+
+.case {
+  padding: 3.5rem 1.5rem 4rem;
+  background-color: #ffffff;
+}
+
+.case__article {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.case__meta {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #8a96a3;
+}
+
+.case__date {
+  margin: 0 0 0.25rem;
+}
+
+.case__byline {
+  margin: 0;
+}
+
+.case__author-link {
+  color: #00698c;
+  text-decoration: none;
+}
+
+.case__author-link:hover,
+.case__author-link:focus-visible {
+  text-decoration: underline;
+}
+
+.case__body p {
+  margin: 0 0 1.1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3e4a55;
+}
+
+.case__body ul {
+  margin: 0 0 1.2rem 1.2rem;
+  padding-left: 1rem;
+}
+
+.case__body li {
+  margin-bottom: 0.3rem;
+}
+
+.case__link {
+  color: #00698c;
+  text-decoration: underline;
+}
+
+/* Prev/next nav */
+
+.case-nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  border-top: 1px solid #edf0f4;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.case-nav__link {
+  color: #00698c;
+  text-decoration: none;
+}
+
+.case-nav__link:hover,
+.case-nav__link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Utility if you later add a next link */
+.case-nav__link--next {
+  margin-left: auto;
+}
+
+/* ---------------- Responsive design ---------------- */
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 2rem;
+  }
+
+  .hero__inner {
+    padding: 2.5rem 3rem;
+  }
+
+  .hero__eyebrow {
+    font-size: 1.1rem;
+  }
+
+  .hero__title {
+    font-size: 2.3rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .offers__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .about-strip {
+    padding: 4rem 2rem;
+  }
+
+  .about-strip__text {
+    font-size: 1.05rem;
+  }
+
+  .cases__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonials__card {
+    min-height: 250px; /* a bit taller on larger screens */
+  }
+
+  .cta-strip {
+    padding: 6rem 2rem;
+  }
+
+  .cta-strip__title {
+    font-size: 2.2rem;
+  }
+
+  .cta-strip__subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    margin-bottom: 2rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
