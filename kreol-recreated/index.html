@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="KREOL AB" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
@@ -35,9 +50,9 @@
             <p class="hero__subtitle">
               Vi hjälper er att ta kontroll över era processer.
             </p>
-            <a href="#" class="hero__button button button--primary">
+            <!-- <a href="#offers" class="hero__button button button--primary">
               Se våra erbjudanden
-            </a>
+            </a> -->
           </div>
         </div>
       </section>
@@ -65,6 +80,7 @@
             </p>
           </div>
 
+          <!--
           <div class="services__item">
             <div class="services__icon">
               <i class="fa-regular fa-lightbulb"></i>
@@ -75,10 +91,11 @@
               skapar vi smarta och kreativa lösningar.
             </p>
           </div>
+          -->
         </div>
       </section>
 
-      <section class="offers">
+      <section class="offers" id="offers">
         <div class="offers__header">
           <h2 class="offers__title">Våra erbjudanden</h2>
           <p class="offers__subtitle">
@@ -104,13 +121,13 @@
                 och spetsutbildningar inom formsprutning, anpassade efter er
                 produktion och personal.
               </p>
-              <a href="#" class="offers__link">
+              <!-- <a href="#" class="offers__link">
                 Läs mer
                 <i
                   class="fa-solid fa-arrow-right offers__link-icon"
                   aria-hidden="true"
                 ></i>
-              </a>
+              </a> -->
             </div>
           </article>
 
@@ -130,13 +147,13 @@
                 Tillsammans analyserar vi era befintliga flöden och tar fram
                 lösningar som minskar cykeltid och ger jämnare kvalitet.
               </p>
-              <a href="#" class="offers__link">
+              <!-- <a href="#" class="offers__link">
                 Läs mer
                 <i
                   class="fa-solid fa-arrow-right offers__link-icon"
                   aria-hidden="true"
                 ></i>
-              </a>
+              </a> -->
             </div>
           </article>
 
@@ -154,13 +171,13 @@
                 Metodstöd och utbildning i strukturerad felsökning som ger er
                 bättre kontroll vid problem i plast- och gummiproduktion.
               </p>
-              <a href="#" class="offers__link">
+              <!-- <a href="#" class="offers__link">
                 Läs mer
                 <i
                   class="fa-solid fa-arrow-right offers__link-icon"
                   aria-hidden="true"
                 ></i>
-              </a>
+              </a> -->
             </div>
           </article>
         </div>
@@ -174,12 +191,12 @@
             kreativ och näringsrik arbetsmiljö.
           </p>
 
-          <a href="#contact" class="about-strip__button button button--primary">
+          <!-- <a href="#contact" class="about-strip__button button button--primary">
             Kontakta oss
-          </a>
+          </a> -->
         </div>
       </section>
-      <section class="cases">
+      <section class="cases" id="cases">
         <div class="cases__header">
           <h2 class="cases__title">Tidigare uppdrag</h2>
           <p class="cases__subtitle">
@@ -189,7 +206,7 @@
 
         <div class="cases__grid">
           <!-- Case 1 -->
-          <a href="/uppdrag/formsprutningsutbildning" class="cases__card">
+          <a href="formsprutningsutbildning.html" class="cases__card">
             <div class="cases__image-wrapper">
               <img
                 src="./images/formsprutningsutbildning.jpg"
@@ -319,15 +336,16 @@
             <p class="footer__text">Följ oss på sociala medier:</p>
 
             <div class="footer__social-list">
-              <a
+              <!-- <a
                 href="https://www.facebook.com"
                 class="footer__social-link"
                 aria-label="Facebook"
               >
                 <i class="fa-brands fa-facebook-f"></i>
-              </a>
+              </a> -->
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/kreolofsweden/"
+                target="_blank"
                 class="footer__social-link"
                 aria-label="LinkedIn"
               >
@@ -349,7 +367,12 @@
             <ul class="footer__contact-list">
               <li class="footer__contact-item">
                 <i class="fa-solid fa-location-dot footer__contact-icon"></i>
-                <a href="#" class="footer__contact-link">Vägbeskrivning</a>
+                <a
+                  href="https://maps.google.com/maps?saddr=current+location&daddr=Kuggebodav%C3%A4gen+68%0D%0A372+94+Ronneby%0D%0ASverige"
+                  target="_blank"
+                  class="footer__contact-link"
+                  >Vägbeskrivning</a
+                >
               </li>
               <li class="footer__contact-item">
                 <i class="fa-solid fa-phone footer__contact-icon"></i>
