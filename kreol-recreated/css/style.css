@@ -744,7 +744,9 @@ h1 {
 
 /* Background image + overlay */
 .case-hero__background,
-.case-formsprutning__background {
+.case-formsprutning__background,
+.case-kylsystemsoptimering__background,
+.case-bioplaster__background {
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
@@ -764,6 +766,22 @@ h1 {
       rgba(0, 105, 140, 0.82)
     ),
     url('../images/formsprutningsutbildning.jpg');
+}
+
+.case-kylsystemsoptimering__background {
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.82),
+      rgba(0, 105, 140, 0.82)
+    ),
+    url('../images/injustering-av-kylsystem.png');
+}
+
+.case-bioplaster__background {
+  background-image: linear-gradient(
+      rgba(0, 105, 140, 0.82),
+      rgba(0, 105, 140, 0.82)
+    ),
+    url('../images/guide-för-bioplaster.png');
 }
 
 .case-hero__inner {
