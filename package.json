@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "watch:scss": "node-sass -w product-preview-card/css/style.scss product-preview-card/css/style.css"
+    "watch:scss": "sass --watch product-preview-card/css/style.scss:product-preview-card/css/style.css"
   },
   "dependencies": {
-    "node-sass": "^9.0.0"
+    "sass": "^1.98.0"
   }
 }
