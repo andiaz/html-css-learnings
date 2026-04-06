@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sweden Rock 2026 Bandval</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #111 0%, #222 100%);
+        color: #eee;
+        margin: 0;
+        padding: 0 20px;
+      }
+      h1 {
+        color: #ffd700;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .intro {
+        max-width: 700px;
+        margin: 0 auto 20px;
+        text-align: center;
+        color: #ccc;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      form {
+        max-width: 700px;
+        margin: auto;
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .question {
+        margin-bottom: 30px;
+      }
+      label {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+      }
+      button {
+        background-color: #ffd700;
+        color: #111;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto 0;
+      }
+      #results {
+        max-width: 700px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #2a2a2a;
+        border: 1px solid #444;
+        border-radius: 8px;
+        display: none;
+      }
+      #results h2 {
+        color: #ffd700;
+      }
+      .band {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .band-rank {
+        color: #ffd700;
+        font-size: 1.4rem;
+        font-weight: bold;
+        min-width: 30px;
+      }
+      .band a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      .band a:hover {
+        text-decoration: underline;
+      }
+      .band .band-desc {
+        width: 100%;
+        color: #bbb;
+        font-size: 0.85rem;
+        margin-top: 2px;
+        line-height: 1.4;
+      }
+      @media (max-width: 600px) {
+        .band {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vilket band ska du se p&aring; Sweden Rock 2026?</h1>
+    <p class="intro">
+      Svara p&aring; 11 fr&aring;gor och f&aring; reda p&aring; vilka band du b&ouml;r kolla in!
+      Perfekt f&ouml;r att hitta g&ouml;mda p&auml;rlor du annars kanske hade missat.
+    </p>
+    <form id="quizForm">
+
+      <div class="question">
+        <strong>1. Hur vill du att sångaren låter?</strong>
+        <label><input type="radio" name="q1" value="floor_jansen,roy_khan,seven_spires,helloween,majestica,savatage" /> Episk operaröst eller skolad power</label>
+        <label><input type="radio" name="q1" value="gatecreeper,grave,thrown,hellbutcher,blood_incantation,halo_effect" /> Rått och aggressivt - growl och skrik</label>
+        <label><input type="radio" name="q1" value="nikki_hill,jared_james_nichols,strom,down,bls" /> Soulfullt, bluesigt och med känsla</label>
+        <label><input type="radio" name="q1" value="joan_jett,michael_monroe,social_distortion,crashdiet,offspring" /> Klassisk rock-röst med attityd</label>
+        <label><input type="radio" name="q1" value="babymetal,magnus_uggla,strevellna,clawfinger,lakeview" /> Det spelar ingen roll, så länge det är unikt</label>
+      </div>
+
+      <div class="question">
+        <strong>2. Vad tar du på dig till festivalen?</strong>
+        <label><input type="radio" name="q2" value="gehennah,hellbutcher,candlemass,overkill,grave,gatecreeper" /> Battle vest och patronbälte</label>
+        <label><input type="radio" name="q2" value="crashdiet,zan_cody,palaye_royale,michael_monroe,treat" /> Snyggt och glammigt - hår och läder</label>
+        <label><input type="radio" name="q2" value="saxon,strom,wilmer_x,down,bls,hellacopters" /> Band-tröja och jeans. Enkelt och ärligt</label>
+        <label><input type="radio" name="q2" value="bmth,thrown,ego_kill_talent,adept,self_deception" /> Nåt modernt och stilrent</label>
+        <label><input type="radio" name="q2" value="alestorm,babymetal,elvenking,skyclad,magnus_uggla" /> Piratdräkt, trollhatt eller nåt galet</label>
+      </div>
+
+      <div class="question">
+        <strong>3. Hur reagerar du när bandet drar igång ett 15 minuter långt gitarrsolo?</strong>
+        <label><input type="radio" name="q3" value="yngwie,john_5,jared_james_nichols,coroner,tom_morello" /> JA!! Mer!! Jag vill se fingrarna blöda!</label>
+        <label><input type="radio" name="q3" value="savatage,hallas,evergrey,blood_incantation,the_gathering" /> Beror på - om det är snyggt och kreativt, gärna</label>
+        <label><input type="radio" name="q3" value="offspring,clawfinger,thrown,hard_ons,adept" /> Nej tack, spela nästa låt istället</label>
+        <label><input type="radio" name="q3" value="bls,down,hellacopters,uncle_acid,dundertaget,strom" /> Solo? Jag vill ha riff!</label>
+      </div>
+
+      <div class="question">
+        <strong>4. Vilken typ av konsert vill du helst uppleva?</strong>
+        <label><input type="radio" name="q4" value="foreigner,treat,zan_cody,dundertaget,the_gathering,the_poodles" /> En historisk gig som kanske aldrig händer igen</label>
+        <label><input type="radio" name="q4" value="babymetal,iron_maiden,static_x,michael_monroe,nikki_hill" /> En liveshow som spränger alla ramar</label>
+        <label><input type="radio" name="q4" value="hard_ons,sister,gehennah,strevellna,hellbutcher" /> Svettigt, nära och punkigt i ett litet tält</label>
+        <label><input type="radio" name="q4" value="trivium,eclipse,helloween,coroner,overkill" /> Tight och proffsigt med perfekt ljud</label>
+      </div>
+
+      <div class="question">
+        <strong>5. Vad säger du om genreblandningar?</strong>
+        <label><input type="radio" name="q5" value="babymetal,lakeview,volbeat,blood_incantation,vreid" /> Gärna! J-pop möter metal? Country-metalcore? Bring it!</label>
+        <label><input type="radio" name="q5" value="candlemass,saxon,overkill,iron_maiden,tailgunner" /> Nej tack, jag vill ha min metal ren och osminkad</label>
+        <label><input type="radio" name="q5" value="hallas,skyclad,alestorm,elvenking,evergrey" /> Lite blandning är kul - folk, prog, lite kryddor</label>
+      </div>
+
+      <div class="question">
+        <strong>6. Hur viktigt är ett kompromisslöst arrangemang?</strong>
+        <label><input type="radio" name="q6" value="gatecreeper,grave,hellbutcher,overkill,forbidden,candlemass" /> Avgörande! Kompromisser är för svaga</label>
+        <label><input type="radio" name="q6" value="strevellna,adept,down,trivium,halo_effect" /> Lagom kompromisslöst, tack</label>
+        <label><input type="radio" name="q6" value="savatage,coroner,seven_spires,hallas,floor_jansen" /> Jag gillar hellre episka eller kreativa arrangemang</label>
+      </div>
+
+      <div class="question">
+        <strong>7. Hur mycket "samtida edge" kräver du i din musik?</strong>
+        <label><input type="radio" name="q7" value="thrown,bmth,adept,ego_kill_talent,self_deception" /> Edge i varje refräng</label>
+        <label><input type="radio" name="q7" value="social_distortion,joan_jett,robin_mcauley,amh,volbeat" /> Hellre gammalt sväng än ny vasshet</label>
+        <label><input type="radio" name="q7" value="saxon,candlemass,foreigner,dirkschneider,iron_maiden" /> Bara band som bildats innan 1990</label>
+        <label><input type="radio" name="q7" value="strevellna,sister,gehennah,vreid,hellbutcher" /> Så spetsigt att det skär</label>
+      </div>
+
+      <div class="question">
+        <strong>8. Vilken dryck dricker du framför scenen?</strong>
+        <label><input type="radio" name="q8" value="alestorm,wilmer_x,korslagda,hellacopters,hard_ons,offspring" /> Svinkall öl i pet-flaska. Massor!</label>
+        <label><input type="radio" name="q8" value="coroner,evergrey,the_gathering,floor_jansen,hallas,blood_incantation" /> Rödvin - det värmer lite ändå</label>
+        <label><input type="radio" name="q8" value="gehennah,down,bls,uncle_acid,overkill,social_distortion" /> Whiskey. Ren. Ingen is</label>
+        <label><input type="radio" name="q8" value="babymetal,self_deception,three_days_grace,lakeview,thrown,bmth" /> Energidryck, jag ska studsa hela setet</label>
+        <label><input type="radio" name="q8" value="helloween,majestica,eclipse,jelusick,lions_share,roy_khan" /> Mjöd ur ett horn, såklart</label>
+      </div>
+
+      <div class="question">
+        <strong>9. Vilket av dessa hypotetiska albumnamn tilltalar dig mest?</strong>
+        <label><input type="radio" name="q9" value="iron_maiden,saxon,savatage,majestica,lions_share,roy_khan" /> "Unlimited Power - the Eternal Crusade"</label>
+        <label><input type="radio" name="q9" value="bmth,thrown,adept,static_x,clawfinger,ego_kill_talent" /> "System Error: Revolt in Every Frequency"</label>
+        <label><input type="radio" name="q9" value="blood_incantation,coroner,hallas,the_gathering,evergrey,uncle_acid" /> "Cosmic Slumber: Meditations in Minor"</label>
+        <label><input type="radio" name="q9" value="offspring,hellacopters,strom,wilmer_x,ashes_of_billy,dundertaget" /> "Full Throttle on a Dead End Road"</label>
+        <label><input type="radio" name="q9" value="crashdiet,palaye_royale,zan_cody,michael_monroe,treat,the_poodles" /> "Lipstick, Lies and Late Nights"</label>
+      </div>
+
+      <div class="question">
+        <strong>10. Vad lockar dig mest med en konsert på Sweden Rock?</strong>
+        <label><input type="radio" name="q10" value="foreigner,treat,zan_cody,the_poodles,robin_mcauley,dirkschneider" /> Sista chansen - bandet slutar snart eller gör en engångsgrej</label>
+        <label><input type="radio" name="q10" value="the_gathering,dundertaget,korslagda,forbidden,clawfinger,grave" /> En historisk återförening eller comeback</label>
+        <label><input type="radio" name="q10" value="jayler,tailgunner,ego_kill_talent,strevellna,ashes_of_billy,seven_spires" /> Upptäcka något helt nytt - framtidens band</label>
+        <label><input type="radio" name="q10" value="eclipse,trivium,halo_effect,tom_morello,nikki_hill,volbeat" /> En pålitlig favorit som alltid levererar</label>
+      </div>
+
+      <div class="question">
+        <strong>11. Hur förhåller du dig till comeback och nostalgi?</strong>
+        <label><input type="radio" name="q11" value="clawfinger,forbidden,the_poodles,three_days_grace,coroner" /> Comeback-skivor är ofta de bästa</label>
+        <label><input type="radio" name="q11" value="thrown,ego_kill_talent,jayler,tailgunner,ashes_of_billy" /> Jag vill bara ha nya band</label>
+        <label><input type="radio" name="q11" value="zan_cody,robin_mcauley,dirkschneider,yngwie,foreigner" /> Nostalgi är underskattat</label>
+        <label><input type="radio" name="q11" value="volbeat,eclipse,self_deception,jelusick,amh" /> Spelar ingen roll, bra musik är bra musik</label>
+      </div>
+
+      <button type="submit">Se vilka band du bör kolla in!</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+      const bandData = {
+        iron_maiden: {
+          name: 'Iron Maiden',
+          spotify: 'https://open.spotify.com/artist/6mdiAmATAx73kdxrNrnlao',
+          desc: 'Heavy metals okrönta kungar firar 50 år med klassiska låtar från de nio första albumen.'
+        },
+        volbeat: {
+          name: 'Volbeat',
+          spotify: 'https://open.spotify.com/artist/0L5fC7Ogm2YwgqVCRcF1bT',
+          desc: 'Danska mästare på feta metalriff blandade med country och 50-talsrock.'
+        },
+        bmth: {
+          name: 'Bring Me The Horizon',
+          spotify: 'https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF',
+          desc: 'Brittisk metalcore-gigant. Oförutsägbar, inflytelserik och enormt stor.'
+        },
+        joan_jett: {
+          name: 'Joan Jett and the Blackhearts',
+          spotify: 'https://open.spotify.com/artist/1Fmb52lZ6Jv7FMWXXTPO3K',
+          desc: 'Rockdrottningen med odödliga hits som "I Love Rock\'n\'Roll" och "Bad Reputation".'
+        },
+        offspring: {
+          name: 'The Offspring',
+          spotify: 'https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ',
+          desc: '90-talets punkkungar. "Pretty Fly", "Self Esteem" och mer. Debut på SRF!'
+        },
+        helloween: {
+          name: 'Helloween',
+          spotify: 'https://open.spotify.com/artist/4pQN0GB0fNEEOfQCaWotsY',
+          desc: 'Power metals gudfäder, nu som supergrupp med alla sina frontmän.'
+        },
+        babymetal: {
+          name: 'Babymetal',
+          spotify: 'https://open.spotify.com/artist/630wzNP2OL7fl4Xl0GnMWq',
+          desc: 'Japansk J-pop möter brutal metal. Koreografi, matchande dräkter och halsbrytande stilvändningar.'
+        },
+        magnus_uggla: {
+          name: 'Magnus Uggla',
+          spotify: 'https://open.spotify.com/artist/30j6YCWLSp59jLF7yIYZWq',
+          desc: 'Ikonisk svensk artist med unikt specialset. Bara på Sweden Rock!'
+        },
+        savatage: {
+          name: 'Savatage',
+          spotify: 'https://open.spotify.com/artist/3N1B1g6JtIgd6ClRkzD4yT',
+          desc: 'Mytomspunna US power/prog metal-stilbildare. Äntligen Sweden Rock-premiär!'
+        },
+        tom_morello: {
+          name: 'Tom Morello',
+          spotify: 'https://open.spotify.com/artist/74NBPbyyftqJ4SpDZ4c1Ed',
+          desc: 'Innovativ gitarrist från Rage Against the Machine. Första SRF-besöket.'
+        },
+        social_distortion: {
+          name: 'Social Distortion',
+          spotify: 'https://open.spotify.com/artist/16nn7kCHPWIB6uK09GQCNI',
+          desc: 'Legendariskt amerikanskt punkband med distinkta inslag av country och hardcore.'
+        },
+        hellacopters: {
+          name: 'The Hellacopters',
+          spotify: 'https://open.spotify.com/artist/1lsXuaLnHnfL7GoJXKkUtH',
+          desc: 'Garagerockens svenska kungar firar 30 år!'
+        },
+        yngwie: {
+          name: 'Yngwie Malmsteen',
+          spotify: 'https://open.spotify.com/artist/5DpSoH5zCXNRqYai7pmcGG',
+          desc: 'Sveriges mest berömda gitarrhjälte. Neoklassiskt spel i absolut världsklass.'
+        },
+        foreigner: {
+          name: 'Foreigner',
+          spotify: 'https://open.spotify.com/artist/6IRouO5mvvfcyxtPDKMYFN',
+          desc: 'AOR-legendarer med "I Want to Know What Love Is". Sannolikt sista chansen att se dem!'
+        },
+        down: {
+          name: 'Down',
+          spotify: 'https://open.spotify.com/artist/1m0B9ak05G0jqDY4ACLhQu',
+          desc: 'Mytomspunnen supergrupp med Pantera- och Crowbar-kopplingar. Tung som få.'
+        },
+        three_days_grace: {
+          name: 'Three Days Grace',
+          spotify: 'https://open.spotify.com/artist/2xiIXseIJcq3nG7C8fHeBj',
+          desc: 'Kanadensisk postgrunge med platinaalbum och hits som "I Hate Everything About You".'
+        },
+        saxon: {
+          name: 'Saxon',
+          spotify: 'https://open.spotify.com/artist/71vVmHeNgCVSa5SVmfvscU',
+          desc: 'NWOBHM-legendarer med Biff Byford i spetsen. Eviga Sweden Rock-favoriter.'
+        },
+        trivium: {
+          name: 'Trivium',
+          spotify: 'https://open.spotify.com/artist/278ZYwGhdK6QTzE3MFePnP',
+          desc: 'Spjutspets inom modern metal. Metalcore, thrash och melodisk death i perfekt kombination.'
+        },
+        bls: {
+          name: 'Black Label Society',
+          spotify: 'https://open.spotify.com/artist/0zfT626RwO6zN3RDYeRit5',
+          desc: 'Zakk Wyldes tunga metal med sydstatsrock-sväng. Intensiv scennärvaro garanterad.'
+        },
+        halo_effect: {
+          name: 'The Halo Effect',
+          spotify: 'https://open.spotify.com/artist/2qvK5iLLoDV5mJeAvh5uka',
+          desc: 'Göteborgs-supergrupp ur In Flames och Dark Tranquillity. Melodisk dödsmetall på elitnivå.'
+        },
+        alestorm: {
+          name: 'Alestorm',
+          spotify: 'https://open.spotify.com/artist/3OpqU68JpZlzvjAJj3B2Da',
+          desc: 'Skotsk pirate metal med allsångsfavoriter som "Drink" och "Mexico".'
+        },
+        wilmer_x: {
+          name: 'Wilmer X',
+          spotify: 'https://open.spotify.com/artist/6yT4ID0YITwJKB9KOiZ41t',
+          desc: 'Skånska garagerock-legendarer. Alltid stämning, ös och klassiker.'
+        },
+        dirkschneider: {
+          name: 'Dirkschneider',
+          spotify: 'https://open.spotify.com/artist/3Ki97iRlfQmVk6qw5tXULX',
+          desc: 'Accept-klassiker med originalsångaren Udo. "Balls to the Wall" live!'
+        },
+        blood_incantation: {
+          name: 'Blood Incantation',
+          spotify: 'https://open.spotify.com/artist/6FGv87WQ3mJWn3cmLUww6x',
+          desc: 'Progressiv death metal. "Morbid Angel möter Pink Floyd". Tekniskt och brutalt.'
+        },
+        floor_jansen: {
+          name: 'Floor Jansen',
+          spotify: 'https://open.spotify.com/artist/2ZNTJ9Bu9QMJwBboMSpQgJ',
+          desc: 'Hårdrockens mest hyllade sångerska (Nightwish) med en hårdare setlista för SRF.'
+        },
+        the_gathering: {
+          name: 'The Gathering',
+          spotify: 'https://open.spotify.com/artist/2kO6zjt4a1OIqxOERhliEX',
+          desc: 'Goth metal-pionjärer återförenade med Anneke van Giersbergen för "Mandylion" 30 år.'
+        },
+        hallas: {
+          name: 'Hällas',
+          spotify: 'https://open.spotify.com/artist/6wL917RC8KC0ZwDbqmO60r',
+          desc: '"Äventyrsrock" från Jönköping. Progressiv 70-talsrock möter 80-tals-heavy metal.'
+        },
+        uncle_acid: {
+          name: 'Uncle Acid & the Deadbeats',
+          spotify: 'https://open.spotify.com/artist/16PcI6JjJuUfPlsX8Ffvfl',
+          desc: 'Psykedelisk, ockult hårdrock från gryningen. Atmosfäriska festivalframträdanden.'
+        },
+        evergrey: {
+          name: 'Evergrey',
+          spotify: 'https://open.spotify.com/artist/4S0foX2r0RlC12KBW8u73D',
+          desc: 'Mörkt, progressivt och melodiskt från Göteborg. Känslostarka konserter.'
+        },
+        adept: {
+          name: 'Adept',
+          spotify: 'https://open.spotify.com/artist/1TsgX8DlUvpk9mrUqxmOZu',
+          desc: 'Svensk metalcore tillbaka efter lång paus. Comeback med "Blood Covenant".'
+        },
+        the_poodles: {
+          name: 'The Poodles',
+          spotify: 'https://open.spotify.com/artist/56qqwnRK5BjH8okTscHtY9',
+          desc: 'Pudelrocksrenässansens spjutspetsar återförenas till 20-årsjubileum!'
+        },
+        eclipse: {
+          name: 'Eclipse',
+          spotify: 'https://open.spotify.com/artist/23ajwxFk5RBpPERZrcjHUr',
+          desc: 'Melodisk hårdrock i världseliten. "Viva La Victoria" och albumdubbletten Megalomanium.'
+        },
+        candlemass: {
+          name: 'Candlemass',
+          spotify: 'https://open.spotify.com/artist/7zDtfSB0AOZWhpuAHZIOw5',
+          desc: 'Sveriges och världens mest legendariska doom metal-band. Episkt och supertungt.'
+        },
+        static_x: {
+          name: 'Static-X',
+          spotify: 'https://open.spotify.com/artist/7JDSHlDdVTo7aZKdQZ53Vf',
+          desc: 'Industrial metal-legendarer. "Push It" och "Wisconsin Death Trip". SRF-debut!'
+        },
+        michael_monroe: {
+          name: 'Michael Monroe',
+          spotify: 'https://open.spotify.com/artist/5Ul6r5lUSOraWUidNnsILZ',
+          desc: 'Finlands rocklegendar (Hanoi Rocks). Intensiv showman med outtömlig energi.'
+        },
+        palaye_royale: {
+          name: 'Palaye Royale',
+          spotify: 'https://open.spotify.com/artist/0hAd6zwEgt9ILuMDY1prcI',
+          desc: '"Fashion-art rock" med 60/70-talsinfluenser à la Rolling Stones och David Bowie.'
+        },
+        thrown: {
+          name: 'Thrown',
+          spotify: 'https://open.spotify.com/artist/5eBCPtU2iPbzuMRre9BePt',
+          desc: 'Ungt Stockholmsband. Hardcore möter metalcore. Vinnare av två Heavy Music Awards.'
+        },
+        clawfinger: {
+          name: 'Clawfinger',
+          spotify: 'https://open.spotify.com/artist/1xE3snzm12GBK259IqEFlY',
+          desc: 'Rap metal-milstolpe med nytt album efter 19 års tystnad!'
+        },
+        korslagda: {
+          name: 'Korslagda',
+          spotify: 'https://open.spotify.com/artist/7uW0TRg4ie6mixKsuLEuAv',
+          desc: 'Dalmasarna är hetare än någonsin. Bokas för andra året i rad!'
+        },
+        treat: {
+          name: 'Treat',
+          spotify: 'https://open.spotify.com/artist/6HY1gnFOOY9ZAgQtzvtZHI',
+          desc: 'Svenska pudelrocksklassiker. Sista albumet och turnén. Missa inte!'
+        },
+        overkill: {
+          name: 'Overkill',
+          spotify: 'https://open.spotify.com/artist/0NmYchKQ8JIR9QHYJA0FRe',
+          desc: 'Oförtröttlig thrash metal sedan 1985. Lika bra som alltid, 21 album senare.'
+        },
+        dundertaget: {
+          name: 'Dundertåget med vänner',
+          spotify: 'https://open.spotify.com/artist/7DNubBpHr6DwOKlkbrtqlT',
+          desc: 'Exklusiv spelning till Strängens ära med stjärngäster. Historiskt!'
+        },
+        grave: {
+          name: 'Grave',
+          spotify: 'https://open.spotify.com/artist/28imYdYhi5ieRXvgYwiIdi',
+          desc: 'Svensk death metals "Big Four". Originalsättningen återförenad!'
+        },
+        forbidden: {
+          name: 'Forbidden',
+          spotify: 'https://open.spotify.com/artist/5MhPZVXE28sD9rXE3GU1uN',
+          desc: 'Bay Area-thrash på elitnivå. Spelskickligt och diggvänligt.'
+        },
+        self_deception: {
+          name: 'Self Deception',
+          spotify: 'https://open.spotify.com/artist/0FHW0Lp33r3fvIG0HL4mW0',
+          desc: 'Poppig rock möter modern metal. Omtalad liveshow.'
+        },
+        roy_khan: {
+          name: 'Roy Khan',
+          spotify: 'https://open.spotify.com/artist/4wB498WRtDd9HWmmR5fE7l',
+          desc: 'Legendarisk power metal-röst (Kamelot). "Black Halo and Beyond"-set.'
+        },
+        majestica: {
+          name: 'Majestica',
+          spotify: 'https://open.spotify.com/artist/52lkxAYfC9ypaPJ2EB22ki',
+          desc: 'Power metal möter filmmusik. Tommy Johanssons episka soloprojekt.'
+        },
+        robin_mcauley: {
+          name: 'Robin McAuley',
+          spotify: 'https://open.spotify.com/artist/5vwEknXi4MlLlFVFF3hDOg',
+          desc: 'Irländsk röst från MSG-åren. Fantastisk sångare med klassiker i bagaget.'
+        },
+        crashdiet: {
+          name: 'Crashdïet',
+          spotify: 'https://open.spotify.com/artist/1cB013ULmW96lglRcrWTut',
+          desc: 'Sleazerenässansens pionjärer. Sleazigare än på länge med nye sångaren.'
+        },
+        elvenking: {
+          name: 'Elvenking',
+          spotify: 'https://open.spotify.com/artist/09b5OcuIELTdD7FfzQzcdB',
+          desc: 'Italiensk folk- och power metal på tolv album. SRF-debut!'
+        },
+        lakeview: {
+          name: 'Lakeview',
+          spotify: 'https://open.spotify.com/artist/4m7IOKt2QRPsoHJSWBmeZD',
+          desc: 'Country möter metalcore. Känsloladdat och intensivt. SRF-debut!'
+        },
+        coroner: {
+          name: 'Coroner',
+          spotify: 'https://open.spotify.com/artist/7lfdXL6PuTM5iWJNvI7PPV',
+          desc: 'Schweiziskt kultband. Progressiv, teknisk thrash metal. Sensationell comeback.'
+        },
+        zan_cody: {
+          name: 'ZAN/CODY',
+          spotify: 'https://open.spotify.com/artist/08rXQbq2f7z8o6PRcsmtJJ',
+          desc: 'Shotgun Messiahs frontduo tillbaka! Glam metal-kultstatus garanterad.'
+        },
+        john_5: {
+          name: 'John 5',
+          spotify: 'https://open.spotify.com/artist/7mAqCk75DUBWgcC0sqhzwX',
+          desc: 'Gitarrhjälte från Rob Zombie/Mötley Crüe. Nydanande instrumental gitarrmusik.'
+        },
+        gatecreeper: {
+          name: 'Gatecreeper',
+          spotify: 'https://open.spotify.com/artist/0eCB2pwtPnLywA4rxe4i4N',
+          desc: 'Råa, tunga, kompromisslösa. Gamla skolans death metal i ny tappning.'
+        },
+        skyclad: {
+          name: 'Skyclad',
+          spotify: 'https://open.spotify.com/artist/3CgDRO3wUoner5eZocDuQN',
+          desc: 'Legendarisk folk metal med dansanta riff och kraftladdat fiolspel.'
+        },
+        strevellna: {
+          name: 'Strevellna',
+          spotify: 'https://open.spotify.com/artist/2i7YQ99TjuxbLZYyw0FNWK',
+          desc: 'Hemligaste svenska hårdrocksbandet. Vass thrash med svenska texter. Liveband-debut!'
+        },
+        ego_kill_talent: {
+          name: 'Ego Kill Talent',
+          spotify: 'https://open.spotify.com/artist/2FkHoIxJdhomebqlsXKZ3i',
+          desc: 'Brasiliansk hård alternativrock med ny sångerska. Framtiden för sig.'
+        },
+        hard_ons: {
+          name: 'Hard-Ons',
+          spotify: 'https://open.spotify.com/artist/6zqlA0w5k0Al6QJFyvRrHB',
+          desc: '"Beach Boys möter Motörhead". Australisk punklegend sedan 1982.'
+        },
+        strom: {
+          name: 'Ström',
+          spotify: 'https://open.spotify.com/artist/54V1n8GBjSoKBDrYpNCT87',
+          desc: '"AC/DC på svenska". Krusidullfri, känslostark rock från Småland.'
+        },
+        jared_james_nichols: {
+          name: 'Jared James Nichols',
+          spotify: 'https://open.spotify.com/artist/2l7Z2HP9bqMaMFSdPP012g',
+          desc: 'Klassisk, hård bluesrock. En av vår tids hetaste gitarrister.'
+        },
+        gehennah: {
+          name: 'Gehennah',
+          spotify: 'https://open.spotify.com/artist/0zVjHf0H46AZqaxSl8C4Ko',
+          desc: 'Svensk heavy metals mesta kultband. Snabb, skitig old school-metal.'
+        },
+        jelusick: {
+          name: 'Jelusick',
+          spotify: 'https://open.spotify.com/artist/2u8jLLgYaIE2ns6mAvI2rG',
+          desc: 'Kroatisk melodiös hårdrock med drag av Van Halen och King\'s X.'
+        },
+        amh: {
+          name: 'AMH',
+          spotify: 'https://open.spotify.com/artist/2TSwn8irgXwsoPyWVjPmnl',
+          desc: 'Klassisk hårdrock à la GN\'R och Van Halen. Briljanta musiker och berömda liveshower.'
+        },
+        seven_spires: {
+          name: 'Seven Spires',
+          spotify: 'https://open.spotify.com/artist/2lP1T5oI2BjkLq9axMhG2o',
+          desc: 'Symfonisk metal från Boston. Episkt, melodiskt och genuint brutalt.'
+        },
+        jayler: {
+          name: 'Jayler',
+          spotify: 'https://open.spotify.com/artist/2cqlQm5f8HXjQ7LCMVsZ7f',
+          desc: 'Unga britter jämförda med Led Zeppelin och Greta Van Fleet. Definitivt på uppgång!'
+        },
+        vreid: {
+          name: 'Vreid',
+          spotify: 'https://open.spotify.com/artist/2KvwC4Kmp2U8XnKr5Yr1hm',
+          desc: 'Norsk black\'n\'roll. Klassisk black metal med 70-tals- och 80-talsklanger.'
+        },
+        tailgunner: {
+          name: 'Tailgunner',
+          spotify: 'https://open.spotify.com/artist/6Wl6VXLasmiON3BDiha6e1',
+          desc: 'NWOTHM. Traditionell heavy metal producerad av K.K. Downing (Judas Priest).'
+        },
+        hellbutcher: {
+          name: 'Hellbutcher',
+          spotify: 'https://open.spotify.com/artist/0LNxFESoHHXMTsh5RIl8L2',
+          desc: 'Gamla skolans black metal med medlemmar från Opeth, Unleashed, Necrophobic m.fl.'
+        },
+        sister: {
+          name: 'Sister',
+          spotify: 'https://open.spotify.com/artist/61wT4HUIxJWYmv7r6lNXiQ',
+          desc: 'Rått, punkigt och metalliskt med underliggande mörker. "W.A.S.P. möter Misfits".'
+        },
+        lions_share: {
+          name: "Lion's Share",
+          spotify: 'https://open.spotify.com/artist/4yIytMmJ2tx30YdMAMkDSo',
+          desc: 'Episk heavy metal tillbaka efter 17 år. För fans av Dio, Judas Priest och Black Sabbath.'
+        },
+        ashes_of_billy: {
+          name: 'Ashes of Billy',
+          spotify: 'https://open.spotify.com/artist/08MmGKkyLtxt58LQrBMwUT',
+          desc: 'Dansk grunge/metal/punk. Intensiv liveshow influerad av 90-talets Seattle.'
+        },
+        nikki_hill: {
+          name: 'Nikki Hill',
+          spotify: 'https://open.spotify.com/artist/28Vn4HKpcOqzagc7tiAxNz',
+          desc: '"Som om Tina Turner frontat AC/DC". Rotnära, intensiv bluesrock.'
+        }
+      };
+
+      document.getElementById('quizForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const bandScores = {};
+        const formData = new FormData(this);
+
+        formData.forEach((value) => {
+          const bands = value.split(',');
+          bands.forEach((band) => {
+            bandScores[band] = (bandScores[band] || 0) + 1;
+          });
+        });
+
+        const sorted = Object.entries(bandScores).sort((a, b) => b[1] - a[1]);
+        const topBands = sorted.slice(0, 10).map((entry) => entry[0]);
+
+        const resultHtml = topBands
+          .map((key, index) => {
+            const band = bandData[key];
+            if (!band) return '';
+            return `
+              <div class="band">
+                <span class="band-rank">${index + 1}.</span>
+                <a href="${band.spotify}" target="_blank">${band.name}</a>
+                <div class="band-desc">${band.desc}</div>
+              </div>
+            `;
+          })
+          .join('');
+
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.style.display = 'block';
+        resultsDiv.innerHTML = `
+          <h2>Dina mest matchande band:</h2>
+          ${resultHtml}
+          <p style="color:#888; font-size:0.8rem; margin-top:20px;">Klicka på bandnamnet för att lyssna på Spotify.</p>
+        `;
+        resultsDiv.scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
